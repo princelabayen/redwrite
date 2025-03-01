@@ -1,0 +1,58 @@
+body {
+    background-color: pink;
+
+    background-image: url('bg.PNG');
+  }
+
+.container {
+    position: relative;
+    width: 480px;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding: 10px;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .container:hover .image {
+    opacity: 0.8;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #aec8ff;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  
+  .container {
+    float: left;
+    width: 24%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
